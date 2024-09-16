@@ -1,35 +1,44 @@
+import React from 'react'
+import { CartProvider } from '../src/components/CartContext/CartContext'
+import Catalog from './pages/Catalog/Catalog'
+import Cart from '../src/pages/Cart/Cart'
+import { IProduct } from './types/types'
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import NoMatch from './pages/NoMatch/NoMatch'
+import { wireless } from './data/data'
+import { headphones } from './data/data'
+import Layout from './components/Layout/Layout'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+	const [productsWireless, setProductsWireless] = useState<IProduct[]>([])
+	const [productsHeadphones, setProductsHeadphones] = useState<IProduct[]>([])
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	useEffect(() => {
+		setProductsWireless(wireless)
+		setProductsHeadphones(headphones)
+	})
+
+	return (
+		<CartProvider>
+			<Routes>
+				<Route path='/' element={<Layout />}>
+					<Route
+						index
+						element={
+							<Catalog
+								productsWireless={productsWireless}
+								productsHeadphones={productsHeadphones}
+							/>
+						}
+					/>
+					<Route path='Cart' element={<Cart />} />
+					<Route path='*' element={<NoMatch />} />
+				</Route>
+			</Routes>
+		</CartProvider>
+	)
 }
 
 export default App
