@@ -15,9 +15,9 @@ const Catalog: React.FC<Product> = ({
 }) => {
 	return (
 		<div className={styles.catalog}>
-			<Heading heading={'Наушники'} />
+			<Heading heading={'Наушники'} color={{ color: '#838383' }} />
 			<ProductList products={productsHeadphones} />
-			<Heading heading={'Беспроводные наушники'} />
+			<Heading heading={'Беспроводные наушники'} color={{ color: '#838383' }} />
 			<ProductList products={productsWireless} />
 		</div>
 	)
