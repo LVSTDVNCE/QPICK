@@ -45,21 +45,21 @@ export const headphones = [
 
 export const wireless = [
 	{
-		id: 1,
+		id: 7,
 		img: 'catalogImg/Air.png',
 		title: 'Apple AirPods',
 		price: 9527,
 		rate: 4.7,
 	},
 	{
-		id: 2,
+		id: 8,
 		img: 'catalogImg/GERLAX.png',
 		title: 'GERLAX GH-04',
 		price: 6527,
 		rate: 4.7,
 	},
 	{
-		id: 3,
+		id: 9,
 		img: 'catalogImg/BOROFONE.png',
 		title: 'BOROFONE BO4',
 		price: 7527,
