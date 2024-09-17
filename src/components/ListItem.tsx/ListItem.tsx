@@ -17,12 +17,21 @@ const ListItem: React.FC<ProductItem> = ({ product }) => {
 	const { addToCart } = useCart()
 	return (
 		<div key={product.id} className={styles.listItem}>
-			<img src={product.img} alt={product.title} />
+			<img src={product.img} alt={product.title} className={styles.itemImg} />
 			<div className={styles.itemWrapper}>
-				<h3>{product.title}</h3>
-				<p>{product.price} ₽</p>
-				<img src={star} alt='' />
-				<button onClick={() => addToCart(product)}>Купить</button>
+				<div className={styles.upperWrap}>
+					<p className={styles.itemTitle}>{product.title}</p>
+					<p className={styles.itemPrice}>{product.price} ₽</p>
+				</div>
+				<div className={styles.underWrap}>
+					<div className={styles.rateWrap}>
+						<img src={star} alt='' />
+						<p className={styles.itemRate}>{product.rate}</p>
+					</div>
+					<button onClick={() => addToCart(product)} className={styles.itemBtn}>
+						Купить
+					</button>
+				</div>
 			</div>
 		</div>
 	)
