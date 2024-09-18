@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
+import styles from './NoMatch.module.css'
 
 function NoMatch() {
 	return (
-		<div>
-			<h2>Nothing to see here!</h2>
-			<p>
-				<Link to='Catalog'>Go to the Catalog</Link>
-			</p>
+		<div className={styles.noMatch}>
+			<h2 className={styles.noMatchHeading}>Такой страницы не существует</h2>
+			<Link to='/' className={styles.noMatchLink}>
+				Вернуться в каталог
+			</Link>
 		</div>
 	)
 }

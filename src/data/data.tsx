@@ -3,8 +3,9 @@ export const headphones = [
 		id: 1,
 		img: 'catalogImg/BYZ.png',
 		title: 'Apple BYZ S852I',
-		price: 2927,
+		price: 3527,
 		rate: 4.7,
+		sale: 2927,
 	},
 	{
 		id: 2,
@@ -12,6 +13,7 @@ export const headphones = [
 		title: 'Apple EarPods',
 		price: 2327,
 		rate: 4.5,
+		sale: 0,
 	},
 	{
 		id: 3,
@@ -19,6 +21,7 @@ export const headphones = [
 		title: 'Apple EarPods',
 		price: 2327,
 		rate: 4.5,
+		sale: 0,
 	},
 	{
 		id: 4,
@@ -26,6 +29,7 @@ export const headphones = [
 		title: 'Apple BYZ S852I',
 		price: 2927,
 		rate: 4.7,
+		sale: 0,
 	},
 	{
 		id: 5,
@@ -33,6 +37,7 @@ export const headphones = [
 		title: 'Apple EarPods',
 		price: 2327,
 		rate: 4.5,
+		sale: 0,
 	},
 	{
 		id: 6,
@@ -40,6 +45,7 @@ export const headphones = [
 		title: 'Apple EarPods',
 		price: 2327,
 		rate: 4.5,
+		sale: 0,
 	},
 ]
 
@@ -50,6 +56,7 @@ export const wireless = [
 		title: 'Apple AirPods',
 		price: 9527,
 		rate: 4.7,
+		sale: 0,
 	},
 	{
 		id: 8,
@@ -57,6 +64,7 @@ export const wireless = [
 		title: 'GERLAX GH-04',
 		price: 6527,
 		rate: 4.7,
+		sale: 0,
 	},
 	{
 		id: 9,
@@ -64,5 +72,6 @@ export const wireless = [
 		title: 'BOROFONE BO4',
 		price: 7527,
 		rate: 4.7,
+		sale: 0,
 	},
 ]

@@ -85,3 +85,21 @@
 	color: black;
 	font-weight: 600;
 }
+
+.ItemPrices {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	top: 109px;
+	left: 188.73px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 15px;
+	color: #aaaaaa;
+}
+
+.ItemOriginalPrice {
+	font-size: 13px;
+	text-decoration: line-through;
+}

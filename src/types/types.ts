@@ -9,4 +9,5 @@ export interface IProduct {
 	title: string
 	price: number
 	rate: number
+	sale: number
 }

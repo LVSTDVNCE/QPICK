@@ -1,0 +1,103 @@
+.modalOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modalOverlay.open {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modalContent {
+	background: white;
+	padding: 20px;
+	border-radius: 30px;
+	max-width: 400px;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transform: scale(0.7);
+	transition: transform 0.3s ease;
+}
+
+.modalOverlay.open .modalContent {
+	transform: scale(1);
+}
+
+.modalImg {
+	max-width: 219px;
+	height: auto;
+	margin-bottom: 20px;
+	object-fit: contain;
+}
+
+.modalTitle {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.modalPrice {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 17px;
+	color: #ffa542;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.modalSale {
+	font-family: 'Montserrat', sans-serif;
+	color: #ffa542;
+	font-weight: 600;
+	margin-right: 10px;
+}
+
+.modalPriceOriginal {
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: line-through;
+	color: #ffa542;
+	font-weight: 600;
+}
+
+.modalRate {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	font-size: 17px;
+	color: #838383;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	text-align: center;
+}
+
+.modalCloseBtn {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 17px;
+	font-weight: 500;
+	background: #101010;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.modalPriceRate {
+	display: flex;
+	gap: 30px;
+}
