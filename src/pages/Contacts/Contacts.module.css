@@ -1,0 +1,10 @@
+.contacts {
+	max-width: 1110px;
+	margin: 0 auto;
+	margin-top: 28px;
+}
+
+.contactsHeading {
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 28px;
+}

@@ -1,0 +1,51 @@
+.formStyle {
+	position: relative;
+	padding-bottom: 55px;
+}
+
+.inputContainer {
+	margin-top: 5px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.inputContainer label {
+	margin-right: 5px;
+}
+
+.inputStyle {
+	width: 100%;
+	font-size: 12px;
+	margin-bottom: 1px;
+	border-radius: 10px;
+}
+
+.inputStyle::placeholder {
+	padding-left: 5px;
+	color: #aaa;
+	font-weight: 600;
+}
+
+.errorStyle {
+	color: red;
+	font-weight: 600;
+	text-decoration: underline;
+	font-size: 12px;
+}
+
+.buttonStyle {
+	width: 348.98px;
+	height: 65px;
+	border: none;
+	border-radius: 20px;
+	position: absolute;
+	bottom: -10px;
+	left: -21px;
+	background-color: #101010;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 17px;
+	font-weight: 600;
+	cursor: pointer;
+}

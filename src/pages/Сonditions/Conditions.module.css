@@ -1,0 +1,18 @@
+.conditions {
+	max-width: 1110px;
+	margin: 0 auto;
+}
+
+.conditionsHeading {
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 28px;
+	margin-bottom: 20px;
+}
+
+.conditionsList {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.conditionsList li {
+	margin-bottom: 10px;
+}

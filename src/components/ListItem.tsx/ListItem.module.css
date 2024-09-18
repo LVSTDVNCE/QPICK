@@ -49,6 +49,12 @@
 	border-radius: 20px;
 	padding: 5px 10px;
 	cursor: pointer;
+	transition: 150ms ease;
+}
+
+.itemBtnModal:hover {
+	background-color: #1c1c27;
+	color: #838383;
 }
 
 .itemWrapper {

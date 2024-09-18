@@ -1,0 +1,10 @@
+.footerContacts {
+	display: flex;
+	flex-direction: row;
+	gap: 17.9px;
+}
+
+.footerContacts img {
+	width: 30px;
+	height: 30px;
+}

@@ -10,6 +10,8 @@ import NoMatch from './pages/NoMatch/NoMatch'
 import { wireless } from './data/data'
 import { headphones } from './data/data'
 import Layout from './components/Layout/Layout'
+import Conditions from './pages/Сonditions/Conditions'
+import Contacts from './pages/Contacts/Contacts'
 
 const App: React.FC = () => {
 	const [productsWireless, setProductsWireless] = useState<IProduct[]>([])
@@ -34,6 +36,8 @@ const App: React.FC = () => {
 						}
 					/>
 					<Route path='Cart' element={<Cart />} />
+					<Route path='Conditions' element={<Conditions />} />
+					<Route path='Contacts' element={<Contacts />} />
 					<Route path='*' element={<NoMatch />} />
 				</Route>
 			</Routes>

@@ -1,9 +1,8 @@
 import styles from './Footer.module.css'
 import Logo from '../Logo/Logo'
-import VK from './../../assets/svg/VK.svg'
-import TG from './../../assets/svg/Telegram.svg'
-import WA from './../../assets/svg/Whatsapp.svg'
 import Language from './../../assets/svg/language.svg'
+import { Link } from 'react-router-dom'
+import FooterContacts from '../FooterContacts/FooterContacts'
 
 const Footer = () => {
 	return (
@@ -15,14 +14,14 @@ const Footer = () => {
 						<a href=''>Избранное</a>
 					</li>
 					<li className={styles.listItem}>
-						<a href=''>Корзина</a>
+						<Link to='/Cart'>Корзина</Link>
 					</li>
 					<li className={styles.listItem}>
-						<a href=''>Контакты</a>
+						<Link to='/Contacts'>Контакты</Link>
 					</li>
 				</ul>
 				<div className={styles.footerColumn}>
-					<a href=''>Условия сервиса</a>
+					<Link to='Conditions'>Условия сервиса</Link>
 					<div className={styles.footerLanguage}>
 						<img src={Language} alt='' />
 						<p className={styles.footerLang} style={{ color: '#FFA542' }}>
@@ -31,17 +30,7 @@ const Footer = () => {
 						<p className={styles.footerLang}>Eng</p>
 					</div>
 				</div>
-				<div className={styles.footerContacts}>
-					<a href=''>
-						<img src={VK} alt='' />
-					</a>
-					<a href=''>
-						<img src={TG} alt='' />
-					</a>
-					<a href=''>
-						<img src={WA} alt='' />
-					</a>
-				</div>
+				<FooterContacts />
 			</div>
 		</div>
 	)
