@@ -6,6 +6,7 @@ import cart from '../../assets/svg/cart.svg'
 import heart from '../../assets/svg/heart.svg'
 import Back from '../../assets/svg/goBack.png'
 import CartSum from '../CartSum/CartSum'
+import FavSum from '../FavSum/FavSum'
 
 const Header = () => {
 	const navigate = useNavigate()
@@ -23,9 +24,9 @@ const Header = () => {
 						<img src={Back} alt='Go back' />
 					</button>
 				)}
-				<Link to='/Cart' className={styles.cartLink}>
-					<img src={heart} alt='Cart' />
-					<CartSum />
+				<Link to='/Favourites' className={styles.cartLink}>
+					<img src={heart} alt='Fav' />
+					<FavSum />
 				</Link>
 				<Link to='/Cart' className={styles.cartLink}>
 					<img src={cart} alt='Cart' />

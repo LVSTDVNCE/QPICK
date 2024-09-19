@@ -10,8 +10,8 @@ interface Product {
 const ProductList: React.FC<Product> = ({ products }) => {
 	return (
 		<div className={styles.productList}>
-			{products.map(product => (
-				<ListItem product={product} />
+			{products.map((product, key) => (
+				<ListItem product={product} key={key} />
 			))}
 		</div>
 	)

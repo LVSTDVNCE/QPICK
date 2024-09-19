@@ -3,6 +3,11 @@ export interface CartItem {
 	quantity: number
 }
 
+export interface FavItem {
+	prod: IProduct
+	quantity: number
+}
+
 export interface IProduct {
 	id: number
 	img: string

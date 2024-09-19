@@ -1,0 +1,17 @@
+.favSum {
+	width: 17.4px;
+	height: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: #ffa542;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	font-weight: 500;
+	padding: 5px;
+	position: absolute;
+	top: 14px;
+	right: 6px;
+}

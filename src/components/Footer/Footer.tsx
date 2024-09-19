@@ -8,10 +8,12 @@ const Footer = () => {
 	return (
 		<div className={styles.footer}>
 			<div className={styles.footerWrapper}>
-				<Logo />
+				<Link to='/' className={styles.link}>
+					<Logo />
+				</Link>
 				<ul className={styles.footerList}>
 					<li className={styles.listItem}>
-						<a href=''>Избранное</a>
+						<Link to='/Favourites'>Избранное</Link>
 					</li>
 					<li className={styles.listItem}>
 						<Link to='/Cart'>Корзина</Link>

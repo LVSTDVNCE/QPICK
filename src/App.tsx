@@ -12,6 +12,8 @@ import { headphones } from './data/data'
 import Layout from './components/Layout/Layout'
 import Conditions from './pages/Сonditions/Conditions'
 import Contacts from './pages/Contacts/Contacts'
+import Favourites from './pages/Favourites/Favourites'
+import { FavProvider } from './components/FavContext/FavContext'
 
 const App: React.FC = () => {
 	const [productsWireless, setProductsWireless] = useState<IProduct[]>([])
@@ -24,23 +26,26 @@ const App: React.FC = () => {
 
 	return (
 		<CartProvider>
-			<Routes>
-				<Route path='/' element={<Layout />}>
-					<Route
-						index
-						element={
-							<Catalog
-								productsWireless={productsWireless}
-								productsHeadphones={productsHeadphones}
-							/>
-						}
-					/>
-					<Route path='Cart' element={<Cart />} />
-					<Route path='Conditions' element={<Conditions />} />
-					<Route path='Contacts' element={<Contacts />} />
-					<Route path='*' element={<NoMatch />} />
-				</Route>
-			</Routes>
+			<FavProvider>
+				<Routes>
+					<Route path='/' element={<Layout />}>
+						<Route
+							index
+							element={
+								<Catalog
+									productsWireless={productsWireless}
+									productsHeadphones={productsHeadphones}
+								/>
+							}
+						/>
+						<Route path='Cart' element={<Cart />} />
+						<Route path='Favourites' element={<Favourites />} />
+						<Route path='Conditions' element={<Conditions />} />
+						<Route path='Contacts' element={<Contacts />} />
+						<Route path='*' element={<NoMatch />} />
+					</Route>
+				</Routes>
+			</FavProvider>
 		</CartProvider>
 	)
 }

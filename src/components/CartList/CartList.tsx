@@ -7,8 +7,8 @@ const CartList = () => {
 
 	return (
 		<div className={styles.cartList}>
-			{cart.map(item => (
-				<CartListItem item={item} />
+			{cart.map((item, key) => (
+				<CartListItem item={item} key={key} />
 			))}
 		</div>
 	)

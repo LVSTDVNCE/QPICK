@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { useCart } from '../../components/CartContext/CartContext'
+import { useFav } from '../FavContext/FavContext'
 import star from '../../assets/svg/star.svg'
 import styles from './ListItem.module.css'
 import Modal from '../Modal/Modal'
+import Heart from '../../assets/svg/heart.svg'
 
 interface ProductItem {
 	product: {
@@ -17,6 +19,16 @@ interface ProductItem {
 
 const ListItem: React.FC<ProductItem> = ({ product }) => {
 	const { addToCart } = useCart()
+	const { addToFav, removeFromFav, isInFav } = useFav()
+
+	const handleFavClick = () => {
+		if (isInFav(product.id)) {
+			removeFromFav(product.id)
+		} else {
+			addToFav(product)
+		}
+	}
+
 	const [isModalOpen, setModalOpen] = useState(false)
 
 	const openModal = () => setModalOpen(true)
@@ -29,6 +41,14 @@ const ListItem: React.FC<ProductItem> = ({ product }) => {
 				<div className={styles.itemBtnWrap}>
 					<button className={styles.itemBtnModal} onClick={openModal}>
 						Подробнее
+					</button>
+					<button className={styles.btnFav}>
+						<img
+							src={Heart}
+							alt='Добавить в избранное'
+							className={styles.imgFav}
+							onClick={handleFavClick}
+						/>
 					</button>
 				</div>
 				<div className={styles.itemWrapper}>
