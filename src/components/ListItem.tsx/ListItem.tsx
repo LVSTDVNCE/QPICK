@@ -21,6 +21,8 @@ const ListItem: React.FC<ProductItem> = ({ product }) => {
 	const { addToCart } = useCart()
 	const { addToFav, removeFromFav, isInFav } = useFav()
 
+	const [isModalOpen, setModalOpen] = useState(false)
+
 	const handleFavClick = () => {
 		if (isInFav(product.id)) {
 			removeFromFav(product.id)
@@ -28,8 +30,6 @@ const ListItem: React.FC<ProductItem> = ({ product }) => {
 			addToFav(product)
 		}
 	}
-
-	const [isModalOpen, setModalOpen] = useState(false)
 
 	const openModal = () => setModalOpen(true)
 	const closeModal = () => setModalOpen(false)
@@ -42,12 +42,13 @@ const ListItem: React.FC<ProductItem> = ({ product }) => {
 					<button className={styles.itemBtnModal} onClick={openModal}>
 						Подробнее
 					</button>
-					<button className={styles.btnFav}>
+					<button className={styles.btnFav} onClick={handleFavClick}>
 						<img
 							src={Heart}
 							alt='Добавить в избранное'
-							className={styles.imgFav}
-							onClick={handleFavClick}
+							className={`${styles.imgFav} ${
+								isInFav(product.id) ? styles.favActive : ''
+							}`}
 						/>
 					</button>
 				</div>

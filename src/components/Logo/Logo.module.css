@@ -3,4 +3,9 @@
 	font-weight: 700;
 	font-size: 25px;
 	color: #101010;
+	transition: 100ms ease-in;
+}
+
+.logo:hover {
+	color: #ffa542;
 }

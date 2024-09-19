@@ -28,6 +28,11 @@
 .listItem a {
 	text-decoration: none;
 	color: black;
+	transition: 100ms ease-in;
+}
+
+.listItem a:hover {
+	color: #ffa542;
 }
 
 .footerColumn {
@@ -43,6 +48,11 @@
 	color: black;
 }
 
+.footerColumn a:hover {
+	transition: 100ms ease-in;
+	color: #ffa542;
+}
+
 .footerLanguage {
 	display: flex;
 	flex-direction: row;
@@ -54,8 +64,23 @@
 	font-weight: 700;
 	font-size: 15px;
 	color: #101010;
+	cursor: pointer;
+}
+
+.footerLang:hover {
+	color: #ffa542;
 }
 
 .link {
 	text-decoration: none;
+}
+
+.footerLanguage img {
+	transition: filter 0.05s ease-in;
+	cursor: pointer;
+}
+
+.footerLanguage img:hover {
+	filter: brightness(0) saturate(100%) invert(87%) sepia(20%) saturate(6128%)
+		hue-rotate(326deg) brightness(101%) contrast(103%);
 }

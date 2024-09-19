@@ -40,3 +40,17 @@
 	align-items: center;
 	position: relative;
 }
+
+.headerWrapper img {
+	transition: filter 0.05s ease-in;
+}
+
+.headerWrapper img:hover {
+	filter: brightness(0) saturate(100%) invert(87%) sepia(20%) saturate(6128%)
+		hue-rotate(326deg) brightness(101%) contrast(103%);
+}
+
+.cartLink.active img {
+	filter: brightness(0) saturate(100%) invert(87%) sepia(20%) saturate(6128%)
+		hue-rotate(326deg) brightness(101%) contrast(103%);
+}

@@ -12,7 +12,7 @@ const FooterContacts = () => {
 			<a href='https://t.me/neoflexcareers' target='_blank'>
 				<img src={TG} alt='' />
 			</a>
-			<a href='tel: + 79991112233' target='_blank'>
+			<a href='tel: + 79991112233'>
 				<img src={WA} alt='' />
 			</a>
 		</div>
