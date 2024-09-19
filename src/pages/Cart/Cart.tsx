@@ -8,8 +8,10 @@ const Cart: React.FC = () => {
 	return (
 		<div className={styles.cart}>
 			<Heading heading={'Корзина'} color={{ color: '#1C1C27' }} />
-			<CartList />
-			<CartTotalPrice />
+			<div className={styles.cartWrapper}>
+				<CartList />
+				<CartTotalPrice />
+			</div>
 		</div>
 	)
 }

@@ -1,7 +1,5 @@
 .cartList {
-	max-width: 650px;
+	width: 633px;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
-	padding-bottom: 180px;
 }

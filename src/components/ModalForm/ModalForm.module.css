@@ -1,23 +1,33 @@
 .modalOverlay {
-	width: 350px;
-	margin-top: 15px;
 	background-color: white;
-	border-radius: 30px;
-	padding: 21px 21px 10px 21px;
 	position: relative;
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	z-index: 1;
 }
 
 .modalContent {
-	padding-top: 40px;
+	background: white;
+	padding: 20px;
+	border-radius: 30px;
+	max-width: 800px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .closeButton {
 	width: 348.98px;
 	height: 65px;
-	position: absolute;
-	top: 0;
-	left: 0;
 	border: none;
 	border-radius: 20px;
 	background-color: #101010;
@@ -26,4 +36,9 @@
 	font-size: 17px;
 	font-weight: 600;
 	cursor: pointer;
+	transition: 100ms ease;
+}
+
+.closeButton:hover {
+	color: #aaaaaa;
 }

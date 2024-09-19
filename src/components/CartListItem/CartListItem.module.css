@@ -4,6 +4,7 @@
 	background-color: white;
 	border-radius: 30px;
 	position: relative;
+	margin-bottom: 20px;
 }
 
 .cartItemImg {
@@ -52,6 +53,11 @@
 	background-color: white;
 	border: none;
 	cursor: pointer;
+	transition: 150ms ease;
+}
+
+.cartItemBtnClear:hover {
+	transform: scale(1.2);
 }
 
 .quantityControls {
@@ -77,6 +83,11 @@
 	justify-content: center;
 	font-size: 24px;
 	font-weight: 700;
+	transition: 100ms ease;
+}
+
+.cartItemBtn:hover {
+	box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ffce7f;
 }
 
 .quantity {

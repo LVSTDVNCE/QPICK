@@ -52,6 +52,11 @@
 	background-color: white;
 	border: none;
 	cursor: pointer;
+	transition: 150ms ease;
+}
+
+.cartItemBtnClear:hover {
+	transform: scale(1.2);
 }
 
 .quantityControls {

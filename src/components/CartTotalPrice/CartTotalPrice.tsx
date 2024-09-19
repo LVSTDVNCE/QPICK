@@ -23,21 +23,23 @@ const CartTotalPrice = () => {
 	}
 
 	return (
-		<div className={styles.total}>
-			<div className={styles.totalPrice}>Итого</div>
-			<div className={styles.totalPrice}>₽ {getTotalPrice()}</div>
-			<button
-				className={styles.totalBtnForm}
-				onClick={() => setIsModalOpen(true)}
-			>
-				Перейти к оформлению
-			</button>
-			{cart.length > 0 && (
-				<button className={styles.totalBtnClear} onClick={handleClearCart}>
-					Очистить корзину
+		<div className={styles.totalWrapper}>
+			<div className={styles.total}>
+				<div className={styles.totalPrice}>Итого</div>
+				<div className={styles.totalPrice}>₽ {getTotalPrice()}</div>
+				<button
+					className={styles.totalBtnForm}
+					onClick={() => setIsModalOpen(true)}
+				>
+					Перейти к оформлению
 				</button>
-			)}
-			{isModalOpen && <ModalForm onClose={() => setIsModalOpen(false)} />}
+				{cart.length > 0 && (
+					<button className={styles.totalBtnClear} onClick={handleClearCart}>
+						Очистить корзину
+					</button>
+				)}
+				{isModalOpen && <ModalForm onClose={() => setIsModalOpen(false)} />}
+			</div>
 		</div>
 	)
 }

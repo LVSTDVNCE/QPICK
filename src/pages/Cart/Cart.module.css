@@ -1,5 +1,15 @@
 .cart {
 	max-width: 1110px;
 	margin: 0 auto;
-	position: relative;
+	padding-bottom: 150px;
+}
+
+.cartWrapper {
+	max-width: 1110px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 20px;
 }
