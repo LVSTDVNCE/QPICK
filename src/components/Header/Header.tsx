@@ -24,11 +24,11 @@ const Header = () => {
 						<img src={Back} alt='Go back' />
 					</button>
 				)}
-				<Link to='/Favourites' className={styles.cartLink}>
+				<Link to='Favourites' className={styles.cartLink}>
 					<img src={heart} alt='Fav' />
 					<FavSum />
 				</Link>
-				<Link to='/Cart' className={styles.cartLink}>
+				<Link to='Cart' className={styles.cartLink}>
 					<img src={cart} alt='Cart' />
 					<CartSum />
 				</Link>
