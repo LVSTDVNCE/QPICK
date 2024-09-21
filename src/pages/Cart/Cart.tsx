@@ -6,13 +6,13 @@ import CartList from '../../components/CartList/CartList'
 
 const Cart: React.FC = () => {
 	return (
-		<div className={styles.cart}>
+		<main className={styles.cart}>
 			<Heading heading={'Корзина'} color={{ color: '#1C1C27' }} />
 			<div className={styles.cartWrapper}>
 				<CartList />
 				<CartTotalPrice />
 			</div>
-		</div>
+		</main>
 	)
 }
 

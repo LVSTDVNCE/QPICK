@@ -14,12 +14,12 @@ const Catalog: React.FC<Product> = ({
 	productsHeadphones,
 }) => {
 	return (
-		<div className={styles.catalog}>
+		<main className={styles.catalog}>
 			<Heading heading={'Наушники'} color={{ color: '#838383' }} />
 			<ProductList products={productsHeadphones} />
 			<Heading heading={'Беспроводные наушники'} color={{ color: '#838383' }} />
 			<ProductList products={productsWireless} />
-		</div>
+		</main>
 	)
 }
 

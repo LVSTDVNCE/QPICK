@@ -3,7 +3,7 @@ import Heading from '../../components/Heading/Heading'
 
 const Conditions = () => {
 	return (
-		<div className={style.conditions}>
+		<main className={style.conditions}>
 			<Heading heading={'Условия сервиса'} color={{ color: '#1C1C27' }} />
 			<ul className={style.conditionsList}>
 				<li>1. ОСНОВНЫЕ ОПРЕДЕЛЕНИЯ...</li>
@@ -17,7 +17,7 @@ const Conditions = () => {
 				<li>9. КОНФИДЕНЦИАЛЬНОСТЬ И ЗАЩИТА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ...</li>
 				<li>10. ПРОЧИЕ УСЛОВИЯ...</li>
 			</ul>
-		</div>
+		</main>
 	)
 }
 

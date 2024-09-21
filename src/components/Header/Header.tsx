@@ -13,39 +13,40 @@ const Header = () => {
 	const location = useLocation()
 	const goBack = () => navigate(-1)
 
-	// Определяем, находится ли пользователь на странице "Избранное" или "Корзина"
 	const isFavouritesPage = location.pathname === '/Favourites'
 	const isCartPage = location.pathname === '/Cart'
 
 	return (
-		<div className={styles.header}>
-			<Link to='/' className={styles.link}>
-				<Logo />
-			</Link>
-			<div className={styles.headerWrapper}>
-				{location.pathname !== '/' && (
-					<button onClick={goBack} className={styles.headerBtn}>
-						<img src={Back} alt='Go back' />
-					</button>
-				)}
-				<Link
-					to='/Favourites'
-					className={`${styles.cartLink} ${
-						isFavouritesPage ? styles.active : ''
-					}`}
-				>
-					<img src={heart} alt='Fav' />
-					<FavSum />
+		<header>
+			<nav className={styles.header}>
+				<Link to='/' className={styles.link}>
+					<Logo />
 				</Link>
-				<Link
-					to='/Cart'
-					className={`${styles.cartLink} ${isCartPage ? styles.active : ''}`}
-				>
-					<img src={cart} alt='Cart' />
-					<CartSum />
-				</Link>
-			</div>
-		</div>
+				<div className={styles.headerWrapper}>
+					{location.pathname !== '/' && (
+						<button onClick={goBack} className={styles.headerBtn}>
+							<img src={Back} alt='Go back' />
+						</button>
+					)}
+					<Link
+						to='/Favourites'
+						className={`${styles.cartLink} ${
+							isFavouritesPage ? styles.active : ''
+						}`}
+					>
+						<img src={heart} alt='Fav' />
+						<FavSum />
+					</Link>
+					<Link
+						to='/Cart'
+						className={`${styles.cartLink} ${isCartPage ? styles.active : ''}`}
+					>
+						<img src={cart} alt='Cart' />
+						<CartSum />
+					</Link>
+				</div>
+			</nav>
+		</header>
 	)
 }
 

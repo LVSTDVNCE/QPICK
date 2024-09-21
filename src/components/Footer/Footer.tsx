@@ -6,7 +6,7 @@ import FooterContacts from '../FooterContacts/FooterContacts'
 
 const Footer = () => {
 	return (
-		<div className={styles.footer}>
+		<footer className={styles.footer}>
 			<div className={styles.footerWrapper}>
 				<Link to='/' className={styles.link}>
 					<Logo />
@@ -34,7 +34,7 @@ const Footer = () => {
 				</div>
 				<FooterContacts />
 			</div>
-		</div>
+		</footer>
 	)
 }
 

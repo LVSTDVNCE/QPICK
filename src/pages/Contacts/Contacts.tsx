@@ -4,10 +4,10 @@ import Heading from '../../components/Heading/Heading'
 
 const Contacts = () => {
 	return (
-		<div className={styles.contacts}>
+		<main className={styles.contacts}>
 			<Heading heading={'Контакты'} color={{ color: '#1C1C27' }} />
 			<FooterContacts />
-		</div>
+		</main>
 	)
 }
 

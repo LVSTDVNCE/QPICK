@@ -4,7 +4,7 @@ import Heading from '../../components/Heading/Heading'
 
 function NoMatch() {
 	return (
-		<div className={styles.noMatch}>
+		<main className={styles.noMatch}>
 			<Heading
 				heading={'Такой страницы не существует'}
 				color={{ color: '#1C1C27' }}
@@ -12,7 +12,7 @@ function NoMatch() {
 			<Link to='/' className={styles.noMatchLink}>
 				Вернуться в каталог
 			</Link>
-		</div>
+		</main>
 	)
 }
 
