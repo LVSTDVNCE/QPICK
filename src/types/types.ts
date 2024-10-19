@@ -16,3 +16,8 @@ export interface IProduct {
 	rate: number
 	sale: number
 }
+
+export interface IRoutes {
+	path: string
+	component: React.ComponentType | any
+}

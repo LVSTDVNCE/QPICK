@@ -1,18 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { IProduct } from '../../types/types'
 import ProductList from '../../components/ProductList/ProductList'
 import Heading from '../../components/Heading/Heading'
 import styles from './Catalog.module.css'
+import { headphones, wireless } from './../../data/data'
 
-interface Product {
-	productsWireless: IProduct[]
-	productsHeadphones: IProduct[]
-}
+const Catalog: React.FC = () => {
+	const [productsWireless, setProductsWireless] = useState<IProduct[]>([])
+	const [productsHeadphones, setProductsHeadphones] = useState<IProduct[]>([])
 
-const Catalog: React.FC<Product> = ({
-	productsWireless,
-	productsHeadphones,
-}) => {
+	useEffect(() => {
+		setProductsWireless(wireless)
+		setProductsHeadphones(headphones)
+	})
 	return (
 		<main className={styles.catalog}>
 			<Heading heading={'Наушники'} color={{ color: '#838383' }} />
